@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="eef07678-9bd2-4fcc-a4e2-91c61d5f9825" name="ServerCheckComponents" linkedPackageId="0ceaccb4-a283-42cd-80ba-0bf048cb5d66" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
+  <packagedElements>
+    <componentModelHasComponents>
+      <component Id="e98e773e-bcbf-4c2e-b508-f38b66be32ac" name="ServerChecker" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="874240a7-d931-43df-9273-381558c8e394" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="95035a2c-9bd8-4c51-824b-4868d3aa3332" name="SQLDatabase" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3de6f41a-383a-4694-8257-f085399df49b" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="90df2738-f63d-4b5d-9886-4f6b91c36a9e" name="FileShare" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5b9c6b2f-5ddd-457c-a15e-cfabd62c0c6a" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="5370fd1b-54a4-4ca9-bc55-0ecd2f27472f" name="FTPServer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7c1fb3ae-dc80-4269-b89a-75ccaff8314e" />
+      </component>
+    </componentModelHasComponents>
+  </packagedElements>
+  <package Id="0ceaccb4-a283-42cd-80ba-0bf048cb5d66" name="TDDMocksModels">
+    <elementDefinition Id="7f24c654-b970-451c-b5bc-d0fe92e1e6b2" />
+    <profileInstances>
+      <packageHasProfileInstances Id="ba1ffc53-b61e-434c-95b4-81c61a228f4e">
+        <profileInstance Id="abdd000f-14f3-47a8-af74-1b62fae00420" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="149d9c29-1bbb-43ee-ac4d-45e6e8a31960">
+        <profileInstance Id="2b6c49d6-0da9-43e3-a0c2-70895183f265" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</componentModel>

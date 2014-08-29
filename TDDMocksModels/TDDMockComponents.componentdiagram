@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="189eefc6-1383-41d7-aae6-2aad3d6e9ab9" name="TDDMockComponents" linkedPackageId="9519bbd3-f83a-4086-8009-c3ed3f6b5bef" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="05fc1bbe-3c9c-4a9a-a693-ec9d6ff16e3c">
+      <profileInstance Id="eef69149-414a-440e-9906-4920027f4dad" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="57e1f820-3e3c-4cc1-9fba-32d852098d55">
+      <profileInstance Id="7e0417d9-e802-45f3-ac02-9018a9e43801" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <componentModelHasComponents>
+      <component Id="6f84ebb5-7c6f-4746-95f5-8619099cca55" name="ServerCheck" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="24810fb9-37db-4d61-8132-5b1cee0d5e2c" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="75fa8edb-f408-48aa-8268-1fe62140c75f" name="SQLServer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d5fea1b8-6904-4d2c-aa92-c533f136c2ed" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="b6d9daa3-2370-48f4-a146-f203fdc5df91" name="FileServer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0536ac24-9c9b-456a-afeb-4ffaabe2ad96" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="4e6084c0-e508-4baf-8acf-98bc3b80ce4a" name="FTPServer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="61870fde-62e9-4c6e-bb30-5874128054ca" />
+      </component>
+    </componentModelHasComponents>
+  </packagedElements>
+  <package Id="9519bbd3-f83a-4086-8009-c3ed3f6b5bef" name="TDDMocksModels">
+    <elementDefinition Id="7f24c654-b970-451c-b5bc-d0fe92e1e6b2" />
+  </package>
+</componentModel>

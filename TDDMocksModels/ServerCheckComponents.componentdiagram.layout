@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="ServerCheckComponents">
+  <componentModelMoniker Id="eef07678-9bd2-4fcc-a4e2-91c61d5f9825" />
+  <nestedChildShapes>
+    <componentShape Id="0f5ff0e6-996e-4511-9225-7521bb5a38ed" absoluteBounds="2.25, 1.75, 1.5, 0.95" customColor="161, 199, 231" whiteBoxBoundsHeight="0" whiteBoxBoundsWidth="0" blackBoxBoundsHeight="0" blackBoxBoundsWidth="0" whiteBoxTopEdgeShapesCount="0" whiteBoxRightEdgeShapesCount="0" whiteBoxBottomEdgeShapesCount="0" whiteBoxLeftEdgeShapesCount="0" blackBoxTopEdgeShapesCount="0" blackBoxRightEdgeShapesCount="0" blackBoxBottomEdgeShapesCount="0" blackBoxLeftEdgeShapesCount="0">
+      <componentMoniker Id="e98e773e-bcbf-4c2e-b508-f38b66be32ac" LastKnownName="ServerChecker" />
+    </componentShape>
+    <componentShape Id="12bc8584-ad53-4b23-bc36-a0f362ed6d08" absoluteBounds="6.0416665077209473, 0.625, 1.5, 0.95" customColor="161, 199, 231" whiteBoxBoundsHeight="0" whiteBoxBoundsWidth="0" blackBoxBoundsHeight="0" blackBoxBoundsWidth="0" whiteBoxTopEdgeShapesCount="0" whiteBoxRightEdgeShapesCount="0" whiteBoxBottomEdgeShapesCount="0" whiteBoxLeftEdgeShapesCount="0" blackBoxTopEdgeShapesCount="0" blackBoxRightEdgeShapesCount="0" blackBoxBottomEdgeShapesCount="0" blackBoxLeftEdgeShapesCount="0">
+      <componentMoniker Id="95035a2c-9bd8-4c51-824b-4868d3aa3332" LastKnownName="SQLDatabase" />
+    </componentShape>
+    <componentShape Id="fed31dea-4b0b-48ef-bee3-59ce199a2714" absoluteBounds="6, 2, 1.5, 0.95" customColor="161, 199, 231" whiteBoxBoundsHeight="0" whiteBoxBoundsWidth="0" blackBoxBoundsHeight="0" blackBoxBoundsWidth="0" whiteBoxTopEdgeShapesCount="0" whiteBoxRightEdgeShapesCount="0" whiteBoxBottomEdgeShapesCount="0" whiteBoxLeftEdgeShapesCount="0" blackBoxTopEdgeShapesCount="0" blackBoxRightEdgeShapesCount="0" blackBoxBottomEdgeShapesCount="0" blackBoxLeftEdgeShapesCount="0">
+      <componentMoniker Id="90df2738-f63d-4b5d-9886-4f6b91c36a9e" LastKnownName="FileShare" />
+    </componentShape>
+    <componentShape Id="aeeb4ffa-65b0-40c9-89e0-cb1d6c37ca19" absoluteBounds="6, 3.75, 1.5, 0.95" customColor="161, 199, 231" whiteBoxBoundsHeight="0" whiteBoxBoundsWidth="0" blackBoxBoundsHeight="0" blackBoxBoundsWidth="0" whiteBoxTopEdgeShapesCount="0" whiteBoxRightEdgeShapesCount="0" whiteBoxBottomEdgeShapesCount="0" whiteBoxLeftEdgeShapesCount="0" blackBoxTopEdgeShapesCount="0" blackBoxRightEdgeShapesCount="0" blackBoxBottomEdgeShapesCount="0" blackBoxLeftEdgeShapesCount="0">
+      <componentMoniker Id="5370fd1b-54a4-4ca9-bc55-0ecd2f27472f" LastKnownName="FTPServer" />
+    </componentShape>
+  </nestedChildShapes>
+</componentDiagram>

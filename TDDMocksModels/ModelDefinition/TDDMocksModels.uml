@@ -1,0 +1,746 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+  dslVersion="1.0.0.0"
+  Id="7f24c654-b970-451c-b5bc-d0fe92e1e6b2"
+  name="TDDMocksModels" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <component
+        Id="874240a7-d931-43df-9273-381558c8e394"
+        name="ServerChecker"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="3de6f41a-383a-4694-8257-f085399df49b"
+        name="SQLDatabase"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="5b9c6b2f-5ddd-457c-a15e-cfabd62c0c6a"
+        name="FileShare"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="7c1fb3ae-dc80-4269-b89a-75ccaff8314e"
+        name="FTPServer"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="77976677-1715-4c05-9dbe-78910a20572c"
+        name="ServerCheckMaster"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <fragments>
+          <combinedFragment
+            Id="24be49e9-957c-4fa6-af36-da11c159ba7e"
+            name="CombinedFragment1"
+            interactionOperator="Loop">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="f55df0b0-38a7-4ecd-bd1e-fac13169b2d2"
+                LastKnownName="ServerChecker"
+                LastKnownLocation="TDDMocksModels.uml" />
+              <lifelineMoniker
+                Id="62ae7a34-e78f-4d27-afe5-8f90475269ef"
+                LastKnownName="SQL Database"
+                LastKnownLocation="TDDMocksModels.uml" />
+              <lifelineMoniker
+                Id="7bff3608-a0a8-4b29-9519-c6cd334c4157"
+                LastKnownName="FileShare"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </coveredLifelines>
+            <operands>
+              <interactionOperand
+                Id="634f2890-c85c-419e-a87b-49c3e6e443a7"
+                name="Loop For Each Server">
+                <coveredLifelines>
+                  <lifelineMoniker
+                    Id="f55df0b0-38a7-4ecd-bd1e-fac13169b2d2"
+                    LastKnownName="ServerChecker"
+                    LastKnownLocation="TDDMocksModels.uml" />
+                  <lifelineMoniker
+                    Id="62ae7a34-e78f-4d27-afe5-8f90475269ef"
+                    LastKnownName="SQL Database"
+                    LastKnownLocation="TDDMocksModels.uml" />
+                  <lifelineMoniker
+                    Id="7bff3608-a0a8-4b29-9519-c6cd334c4157"
+                    LastKnownName="FileShare"
+                    LastKnownLocation="TDDMocksModels.uml" />
+                </coveredLifelines>
+                <guard>
+                  <interactionConstraint
+                    Id="13d988fa-85ce-499a-8903-2bdf11fecac4"
+                    guardText="All servers">
+                    <maxInt>
+                      <literalString
+                        Id="9cf8cebc-e5aa-45c7-b7b6-98edef8c7953"
+                        name="LiteralString1" />
+                    </maxInt>
+                    <minInt>
+                      <literalString
+                        Id="d5f1f618-4b62-4083-ac4e-e8267891516f"
+                        name="LiteralString2" />
+                    </minInt>
+                  </interactionConstraint>
+                </guard>
+                <operandOccurrenceSpecifications>
+                  <operandOccurrenceSpecificationMoniker
+                    Id="4c79ba87-65a0-4339-82a8-5e691aa5981c"
+                    LastKnownName="OperandOccurrenceSpecification1"
+                    LastKnownLocation="TDDMocksModels.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="dea21816-a8bb-414a-b367-917d19c52cb7"
+                    LastKnownName="OperandOccurrenceSpecification2"
+                    LastKnownLocation="TDDMocksModels.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="dad86819-5c1f-4c42-b84d-ba75ce3c86ab"
+                    LastKnownName="OperandOccurrenceSpecification3"
+                    LastKnownLocation="TDDMocksModels.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="68111426-90d4-474d-bc0e-c2c2c11f5a54"
+                    LastKnownName="OperandOccurrenceSpecification4"
+                    LastKnownLocation="TDDMocksModels.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="5ab3a1e9-8713-4a90-a771-44ed7a5bdcd2"
+                    LastKnownName="OperandOccurrenceSpecification9"
+                    LastKnownLocation="TDDMocksModels.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="a655a927-478e-4ad8-9c05-085b64c1fafc"
+                    LastKnownName="OperandOccurrenceSpecification10"
+                    LastKnownLocation="TDDMocksModels.uml" />
+                </operandOccurrenceSpecifications>
+              </interactionOperand>
+            </operands>
+          </combinedFragment>
+          <operandOccurrenceSpecification
+            Id="dad86819-5c1f-4c42-b84d-ba75ce3c86ab"
+            name="OperandOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="62ae7a34-e78f-4d27-afe5-8f90475269ef"
+                LastKnownName="SQL Database"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="4c79ba87-65a0-4339-82a8-5e691aa5981c"
+            name="OperandOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="f55df0b0-38a7-4ecd-bd1e-fac13169b2d2"
+                LastKnownName="ServerChecker"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="5ab3a1e9-8713-4a90-a771-44ed7a5bdcd2"
+            name="OperandOccurrenceSpecification9">
+            <covered>
+              <lifelineMoniker
+                Id="7bff3608-a0a8-4b29-9519-c6cd334c4157"
+                LastKnownName="FileShare"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="78e8bab6-ca40-47be-9791-2887e894976b"
+            name="BehaviorExecutionSpecification1">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="62ae7a34-e78f-4d27-afe5-8f90475269ef"
+                LastKnownName="SQL Database"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="62e7f1a2-b8b0-4ee5-8c18-765b2e3e174b"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="ae3c7b02-7064-4b1f-9672-d164ca457187"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="66590aa9-db96-4418-92d2-bc8e60d1ffde"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="TDDMocksModels.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="221d3914-6b6c-4472-8c93-abf14bac8918"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="ae3c7b02-7064-4b1f-9672-d164ca457187"
+            name="ExecutionOccurrenceSpecification1">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="f2095466-ab4e-46cc-b4e8-4766ba9c2201"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="TDDMocksModels.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="62ae7a34-e78f-4d27-afe5-8f90475269ef"
+                LastKnownName="SQL Database"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="66590aa9-db96-4418-92d2-bc8e60d1ffde"
+            name="MessageOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="62ae7a34-e78f-4d27-afe5-8f90475269ef"
+                LastKnownName="SQL Database"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="bee74169-f476-44dd-8619-b161aa1c33ab"
+            name="MessageOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="f55df0b0-38a7-4ecd-bd1e-fac13169b2d2"
+                LastKnownName="ServerChecker"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="4abc5a09-bcb8-4dd3-a854-61a7c7962cab"
+            name="MessageOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="f55df0b0-38a7-4ecd-bd1e-fac13169b2d2"
+                LastKnownName="ServerChecker"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="221d3914-6b6c-4472-8c93-abf14bac8918"
+            name="MessageOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="62ae7a34-e78f-4d27-afe5-8f90475269ef"
+                LastKnownName="SQL Database"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="62e7f1a2-b8b0-4ee5-8c18-765b2e3e174b"
+            name="ExecutionOccurrenceSpecification2">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="7eec0231-f406-40dd-a898-9da5a95da0d7"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="TDDMocksModels.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="62ae7a34-e78f-4d27-afe5-8f90475269ef"
+                LastKnownName="SQL Database"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="f51b9cea-8355-40ec-9b74-5a33630fe5ad"
+            name="BehaviorExecutionSpecification2">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="7bff3608-a0a8-4b29-9519-c6cd334c4157"
+                LastKnownName="FileShare"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="797597ce-38ad-4e2d-8111-6557414ee5e9"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="075b1af2-4e92-42e1-b25e-c8e17524af64"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="80c83c27-868a-4f12-9ab5-6113d9e7aff9"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="075b1af2-4e92-42e1-b25e-c8e17524af64"
+            name="ExecutionOccurrenceSpecification3">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="8fa7abdc-8799-4216-8a3c-180623a630cf"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="TDDMocksModels.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="7bff3608-a0a8-4b29-9519-c6cd334c4157"
+                LastKnownName="FileShare"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="de453131-a001-423c-bbc3-2f129c41b78b"
+            name="MessageOccurrenceSpecification5">
+            <covered>
+              <lifelineMoniker
+                Id="f55df0b0-38a7-4ecd-bd1e-fac13169b2d2"
+                LastKnownName="ServerChecker"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="80c83c27-868a-4f12-9ab5-6113d9e7aff9"
+            name="MessageOccurrenceSpecification6">
+            <covered>
+              <lifelineMoniker
+                Id="7bff3608-a0a8-4b29-9519-c6cd334c4157"
+                LastKnownName="FileShare"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="797597ce-38ad-4e2d-8111-6557414ee5e9"
+            name="ExecutionOccurrenceSpecification4">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="268f6e81-bc5c-4fe3-b9f3-d66476d98319"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="TDDMocksModels.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="7bff3608-a0a8-4b29-9519-c6cd334c4157"
+                LastKnownName="FileShare"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="a655a927-478e-4ad8-9c05-085b64c1fafc"
+            name="OperandOccurrenceSpecification10">
+            <covered>
+              <lifelineMoniker
+                Id="7bff3608-a0a8-4b29-9519-c6cd334c4157"
+                LastKnownName="FileShare"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="dea21816-a8bb-414a-b367-917d19c52cb7"
+            name="OperandOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="f55df0b0-38a7-4ecd-bd1e-fac13169b2d2"
+                LastKnownName="ServerChecker"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="68111426-90d4-474d-bc0e-c2c2c11f5a54"
+            name="OperandOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="62ae7a34-e78f-4d27-afe5-8f90475269ef"
+                LastKnownName="SQL Database"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <interactionUse
+            Id="e2eacba2-8541-43da-a863-f1978803a860"
+            name="Send Results to FTP Server">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="f55df0b0-38a7-4ecd-bd1e-fac13169b2d2"
+                LastKnownName="ServerChecker"
+                LastKnownLocation="TDDMocksModels.uml" />
+              <lifelineMoniker
+                Id="62ae7a34-e78f-4d27-afe5-8f90475269ef"
+                LastKnownName="SQL Database"
+                LastKnownLocation="TDDMocksModels.uml" />
+              <lifelineMoniker
+                Id="7bff3608-a0a8-4b29-9519-c6cd334c4157"
+                LastKnownName="FileShare"
+                LastKnownLocation="TDDMocksModels.uml" />
+              <lifelineMoniker
+                Id="d9a09650-00c1-4d56-a02b-013b1e0e2e40"
+                LastKnownName="FTPServer"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </coveredLifelines>
+            <interactionUseOccurrenceSpecifications>
+              <interactionUseOccurrenceSpecificationMoniker
+                Id="a54070bb-f13d-40cf-ba05-96fee3dd69aa"
+                LastKnownName="InteractionUseOccurrenceSpecification5"
+                LastKnownLocation="TDDMocksModels.uml" />
+              <interactionUseOccurrenceSpecificationMoniker
+                Id="cf8c86bd-fe9d-49e5-bffe-86b4b6071907"
+                LastKnownName="InteractionUseOccurrenceSpecification6"
+                LastKnownLocation="TDDMocksModels.uml" />
+              <interactionUseOccurrenceSpecificationMoniker
+                Id="83ed497a-8711-4c11-a559-8046dfb19628"
+                LastKnownName="InteractionUseOccurrenceSpecification7"
+                LastKnownLocation="TDDMocksModels.uml" />
+              <interactionUseOccurrenceSpecificationMoniker
+                Id="b4af7d1c-6452-4788-8c23-72af8b80c91e"
+                LastKnownName="InteractionUseOccurrenceSpecification8"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </interactionUseOccurrenceSpecifications>
+          </interactionUse>
+          <interactionUseOccurrenceSpecification
+            Id="a54070bb-f13d-40cf-ba05-96fee3dd69aa"
+            name="InteractionUseOccurrenceSpecification5">
+            <covered>
+              <lifelineMoniker
+                Id="f55df0b0-38a7-4ecd-bd1e-fac13169b2d2"
+                LastKnownName="ServerChecker"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </covered>
+          </interactionUseOccurrenceSpecification>
+          <interactionUseOccurrenceSpecification
+            Id="cf8c86bd-fe9d-49e5-bffe-86b4b6071907"
+            name="InteractionUseOccurrenceSpecification6">
+            <covered>
+              <lifelineMoniker
+                Id="62ae7a34-e78f-4d27-afe5-8f90475269ef"
+                LastKnownName="SQL Database"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </covered>
+          </interactionUseOccurrenceSpecification>
+          <interactionUseOccurrenceSpecification
+            Id="83ed497a-8711-4c11-a559-8046dfb19628"
+            name="InteractionUseOccurrenceSpecification7">
+            <covered>
+              <lifelineMoniker
+                Id="7bff3608-a0a8-4b29-9519-c6cd334c4157"
+                LastKnownName="FileShare"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </covered>
+          </interactionUseOccurrenceSpecification>
+          <interactionUseOccurrenceSpecification
+            Id="b4af7d1c-6452-4788-8c23-72af8b80c91e"
+            name="InteractionUseOccurrenceSpecification8">
+            <covered>
+              <lifelineMoniker
+                Id="d9a09650-00c1-4d56-a02b-013b1e0e2e40"
+                LastKnownName="FTPServer"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </covered>
+          </interactionUseOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="f55df0b0-38a7-4ecd-bd1e-fac13169b2d2"
+            name="ServerChecker"
+            isActor="false"
+            lifelineDisplayName="ServerChecker">
+            <represents>
+              <propertyMoniker
+                Id="a3502c08-cb20-40b4-83f6-aef6d373dab5"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <operandOccurrenceSpecificationMoniker
+                Id="4c79ba87-65a0-4339-82a8-5e691aa5981c"
+                LastKnownName="OperandOccurrenceSpecification1"
+                LastKnownLocation="TDDMocksModels.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="bee74169-f476-44dd-8619-b161aa1c33ab"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="TDDMocksModels.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="4abc5a09-bcb8-4dd3-a854-61a7c7962cab"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="TDDMocksModels.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="de453131-a001-423c-bbc3-2f129c41b78b"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="TDDMocksModels.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="dea21816-a8bb-414a-b367-917d19c52cb7"
+                LastKnownName="OperandOccurrenceSpecification2"
+                LastKnownLocation="TDDMocksModels.uml" />
+              <interactionUseOccurrenceSpecificationMoniker
+                Id="a54070bb-f13d-40cf-ba05-96fee3dd69aa"
+                LastKnownName="InteractionUseOccurrenceSpecification5"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="62ae7a34-e78f-4d27-afe5-8f90475269ef"
+            name="SQL Database"
+            isActor="false"
+            lifelineDisplayName="SQL Database">
+            <topLevelOccurrences>
+              <operandOccurrenceSpecificationMoniker
+                Id="dad86819-5c1f-4c42-b84d-ba75ce3c86ab"
+                LastKnownName="OperandOccurrenceSpecification3"
+                LastKnownLocation="TDDMocksModels.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="ae3c7b02-7064-4b1f-9672-d164ca457187"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="TDDMocksModels.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="62e7f1a2-b8b0-4ee5-8c18-765b2e3e174b"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="TDDMocksModels.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="68111426-90d4-474d-bc0e-c2c2c11f5a54"
+                LastKnownName="OperandOccurrenceSpecification4"
+                LastKnownLocation="TDDMocksModels.uml" />
+              <interactionUseOccurrenceSpecificationMoniker
+                Id="cf8c86bd-fe9d-49e5-bffe-86b4b6071907"
+                LastKnownName="InteractionUseOccurrenceSpecification6"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="7bff3608-a0a8-4b29-9519-c6cd334c4157"
+            name="FileShare"
+            isActor="false"
+            lifelineDisplayName="FileShare">
+            <represents>
+              <propertyMoniker
+                Id="bd4ffbce-6f5e-4de0-a4e2-bb2a2f3fea0b"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <operandOccurrenceSpecificationMoniker
+                Id="5ab3a1e9-8713-4a90-a771-44ed7a5bdcd2"
+                LastKnownName="OperandOccurrenceSpecification9"
+                LastKnownLocation="TDDMocksModels.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="075b1af2-4e92-42e1-b25e-c8e17524af64"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="TDDMocksModels.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="797597ce-38ad-4e2d-8111-6557414ee5e9"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="TDDMocksModels.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="a655a927-478e-4ad8-9c05-085b64c1fafc"
+                LastKnownName="OperandOccurrenceSpecification10"
+                LastKnownLocation="TDDMocksModels.uml" />
+              <interactionUseOccurrenceSpecificationMoniker
+                Id="83ed497a-8711-4c11-a559-8046dfb19628"
+                LastKnownName="InteractionUseOccurrenceSpecification7"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="d9a09650-00c1-4d56-a02b-013b1e0e2e40"
+            name="FTPServer"
+            isActor="false"
+            lifelineDisplayName="FTPServer">
+            <represents>
+              <propertyMoniker
+                Id="0a3199ce-7f52-46bb-9b39-c0faf193c795"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <interactionUseOccurrenceSpecificationMoniker
+                Id="b4af7d1c-6452-4788-8c23-72af8b80c91e"
+                LastKnownName="InteractionUseOccurrenceSpecification8"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="61200592-f829-49a1-b053-1dfda5655c2d"
+            name="CheckLastEntry"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="bee74169-f476-44dd-8619-b161aa1c33ab"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="66590aa9-db96-4418-92d2-bc8e60d1ffde"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="dd669c73-6d51-47c0-9b2b-3d5ae7ece861"
+            name="&lt;&lt;ServerConfiguration&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="221d3914-6b6c-4472-8c93-abf14bac8918"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="4abc5a09-bcb8-4dd3-a854-61a7c7962cab"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="358b3224-8bbc-408a-912d-a93ad675b515"
+            name="Log Results"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="de453131-a001-423c-bbc3-2f129c41b78b"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="80c83c27-868a-4f12-9ab5-6113d9e7aff9"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+        <ownedAttributesInternal>
+          <property
+            Id="a3502c08-cb20-40b4-83f6-aef6d373dab5"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <componentMoniker
+                Id="874240a7-d931-43df-9273-381558c8e394"
+                LastKnownName="ServerChecker"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="bd4ffbce-6f5e-4de0-a4e2-bb2a2f3fea0b"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <componentMoniker
+                Id="5b9c6b2f-5ddd-457c-a15e-cfabd62c0c6a"
+                LastKnownName="FileShare"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="0a3199ce-7f52-46bb-9b39-c0faf193c795"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <componentMoniker
+                Id="7c1fb3ae-dc80-4269-b89a-75ccaff8314e"
+                LastKnownName="FTPServer"
+                LastKnownLocation="TDDMocksModels.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="f2095466-ab4e-46cc-b4e8-4766ba9c2201"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="7eec0231-f406-40dd-a898-9da5a95da0d7"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="8fa7abdc-8799-4216-8a3c-180623a630cf"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="268f6e81-bc5c-4fe3-b9f3-d66476d98319"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>
