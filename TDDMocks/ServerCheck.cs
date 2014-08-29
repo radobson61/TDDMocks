@@ -19,34 +19,38 @@ namespace TDDMocks
 
         public ServerConfiguration Result(string servername)
         {
-            string targetserver = (from serverrow in _serverdata.AsEnumerable()
-                                 where serverrow.Field<string>("ServerName") == servername
-                                 select (string)serverrow["ServerName"]).LastOrDefault();
+            IEnumerable<DataRow> results = _serverdata.AsEnumerable()
+    .Where(s => s.Field<string>("ServerName") == servername)
+    .OrderByDescending(o => o.Field<DateTime>("CollectionTime"));
 
-            DateTime lastCollection = (from serverrow in _serverdata.AsEnumerable()
-                                       where serverrow.Field<string>("ServerName") == servername
-                                       select (DateTime)serverrow["CollectionTime"]).LastOrDefault();
 
-            if (string.IsNullOrEmpty(targetserver))
-                return ServerConfiguration.Error;
-            if (DateTime.Now.Subtract(TimeSpan.FromHours(12)) > lastCollection)
-                return ServerConfiguration.ReportingError;
-            if (PercentageChange(servername) > 15)
-                return ServerConfiguration.RapidChange;
-            
-            return ServerConfiguration.OK;
+
+            return FindResult(results);
 
         }
 
-        private int PercentageChange(string servername)
+        private ServerConfiguration FindResult(IEnumerable<DataRow> results)
+        {
+            ServerConfiguration result = ServerConfiguration.OK;
+
+            if (results.Count() == 0)
+                return ServerConfiguration.Error;
+            if (DateTime.Now.Subtract(TimeSpan.FromHours(12)) > results.First().Field<DateTime>("CollectionTime"))
+                return ServerConfiguration.ReportingError;
+            if (PercentageChange(results.First().Field<string>("ServerName"), results) > 15)
+                return ServerConfiguration.RapidChange;
+            
+            return result;
+        }
+
+        private int PercentageChange(string servername, IEnumerable<DataRow> results)
         {
             decimal measure1;
             decimal measure2;
             int c = 0;
-            IEnumerable<DataRow> results = _serverdata.AsEnumerable()
-                .Where(s => s.Field<string>("ServerName") == servername)
-                .OrderByDescending(o => o.Field<DateTime>("CollectionTime"));
-            if (results != null && results.Count<DataRow>() > 1)
+
+  
+            if (results.Count<DataRow>() > 1)
             {
                 measure1 = (decimal)results.ElementAt(0).Field<Int32>("Measurement");
                 measure2 = (decimal)results.ElementAt(1).Field<Int32>("Measurement");

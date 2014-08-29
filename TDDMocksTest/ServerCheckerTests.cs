@@ -116,6 +116,37 @@ namespace TDDMocksTest
             return table;
         }
 
+        
+        ///<summary>
+        /// ServerCheckResults Is OK when ItsARecentMeasurementAndChange is LessThan15Percent
+        ///</summary>
+        [TestMethod()]
+        [TestCategory("Programmer")]
+        public void ServerCheckResults_Is_OK_When_ItsARecentMeasurementAndChange_is_LessThan15Percent()
+        {
+            //assemble
+            string servername = "Server";
+            DataTable serverInformation = MakeServerInformationTable();
+            DataRow dr;
+            dr = serverInformation.NewRow();
+            // older measurement
+            dr["ServerName"] = servername;
+            dr["CollectionTime"] = DateTime.Now.Subtract(TimeSpan.FromHours(13));
+            dr["Measurement"] = 100;
+            serverInformation.Rows.Add(dr);
+            dr = serverInformation.NewRow();
+            dr["ServerName"] = servername;
+            dr["CollectionTime"] = DateTime.Now.Subtract(TimeSpan.FromHours(2));
+            dr["Measurement"] = 114;
+            serverInformation.Rows.Add(dr);
+            ServerConfiguration expected = ServerConfiguration.OK;
+            ServerCheck target = new ServerCheck(serverInformation);
+            //act
+            ServerConfiguration actual = target.Result(servername);
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+
 
     }
 }
