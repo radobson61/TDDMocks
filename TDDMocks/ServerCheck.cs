@@ -32,7 +32,8 @@ namespace TDDMocks
             if (DateTime.Now.Subtract(TimeSpan.FromHours(12)) > lastCollection)
                 return ServerConfiguration.ReportingError;
             if (PercentageChange(servername) > 15)
-                return ServerConfiguration.RapidChange;            
+                return ServerConfiguration.RapidChange;
+            
             return ServerConfiguration.OK;
 
         }
@@ -55,6 +56,7 @@ namespace TDDMocks
 
             return c;
 
-        }
+        }
+
     }
 }

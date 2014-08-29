@@ -6,10 +6,16 @@ using TDDMocks;
 
 namespace TDDMocksTest
 {
+    /// <summary>
+    /// ServerCheck Code Coverage @ 96.83%
+    /// Maintainability 78
+    /// </summary>
     [ExcludeFromCodeCoverage]
     [TestClass]
     public class ServerCheckerTests
     {
+        
+
         ///<summary>
         /// ServerConfigurationResult Is Error when ServerName is NotFoundinDB
         ///</summary>
@@ -92,8 +98,12 @@ namespace TDDMocksTest
             ServerConfiguration actual = target.Result(servername);
             //assert
             Assert.AreEqual(expected, actual);
-        }
+        }
 
+        /// <summary>
+        /// Create a private method to increase code use.
+        /// </summary>
+        /// <returns></returns>
         private DataTable MakeServerInformationTable()
         {
             DataTable table = new DataTable("ServerInformation");
