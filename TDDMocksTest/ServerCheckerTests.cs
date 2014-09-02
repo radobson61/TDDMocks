@@ -99,10 +99,8 @@ namespace TDDMocksTest
             //assert
             Assert.AreEqual(expected, actual);
         }
-
-        
-
-        
+                
+                
         ///<summary>
         /// ServerCheckResults Is OK when ItsARecentMeasurementAndChange is LessThan15Percent
         ///</summary>
@@ -125,6 +123,33 @@ namespace TDDMocksTest
             dr["CollectionTime"] = DateTime.Now.Subtract(TimeSpan.FromHours(2));
             dr["Measurement"] = 114;
             serverInformation.Rows.Add(dr);
+            ServerConfiguration expected = ServerConfiguration.OK;
+            ServerCheck target = new ServerCheck(serverInformation);
+            //act
+            ServerConfiguration actual = target.Result(servername);
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        
+        ///<summary>
+        /// ServerCheckResults Is OK when OneEntry11HoursOld is InTheDatabase
+        ///</summary>
+        [TestMethod()]
+        [TestCategory("Programmer")]
+        public void ServerCheckResults_Is_OK_When_OneEntry11HoursOld_is_InTheDatabase()
+        {
+            //assemble
+            string servername = "Server";
+            DataTable serverInformation = MakeServerInformationTable();
+            DataRow dr;
+            dr = serverInformation.NewRow();
+            // older measurement
+            dr["ServerName"] = servername;
+            dr["CollectionTime"] = DateTime.Now.Subtract(TimeSpan.FromHours(11));
+            dr["Measurement"] = 100;
+            serverInformation.Rows.Add(dr);
+            //act
             ServerConfiguration expected = ServerConfiguration.OK;
             ServerCheck target = new ServerCheck(serverInformation);
             //act

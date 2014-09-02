@@ -19,11 +19,9 @@ namespace TDDMocks
 
         public ServerConfiguration Result(string servername)
         {
-            IEnumerable<DataRow> results = _serverdata.AsEnumerable()
+            return FindResult(_serverdata.AsEnumerable()
                 .Where(s => s.Field<string>("ServerName") == servername)
-                .OrderByDescending(d => d.Field<DateTime>("CollectionTime"));
-
-            return FindResult(results);
+                .OrderByDescending(d => d.Field<DateTime>("CollectionTime")));
 
         }
 
@@ -42,8 +40,6 @@ namespace TDDMocks
 
         private int PercentageChange(string servername, IEnumerable<DataRow> results)
         {
-
-  
             if (results.Count<DataRow>() > 1)
             {
                 decimal r = ((decimal)results.ElementAt(0).Field<Int32>("Measurement") / (decimal)results.ElementAt(1).Field<Int32>("Measurement"));
@@ -51,7 +47,6 @@ namespace TDDMocks
             }
 
             return 0;
-
         }
 
     }
