@@ -100,21 +100,7 @@ namespace TDDMocksTest
             Assert.AreEqual(expected, actual);
         }
 
-        /// <summary>
-        /// Create a private method to increase code use.
-        /// </summary>
-        /// <returns></returns>
-        private DataTable MakeServerInformationTable()
-        {
-            DataTable table = new DataTable("ServerInformation");
-            DataColumn dc = new DataColumn() { DataType = System.Type.GetType("System.String"), ColumnName = "ServerName" };
-            table.Columns.Add(dc);
-            dc = new DataColumn() { DataType = System.Type.GetType("System.DateTime"), ColumnName = "CollectionTime" };
-            table.Columns.Add(dc);
-            dc = new DataColumn() { DataType = System.Type.GetType("System.Int32"), ColumnName = "Measurement" };
-            table.Columns.Add(dc);
-            return table;
-        }
+        
 
         
         ///<summary>
@@ -146,6 +132,25 @@ namespace TDDMocksTest
             //assert
             Assert.AreEqual(expected, actual);
         }
+
+        #region Helper methods
+
+        /// <summary>
+        /// Create a private method to increase code reuse.
+        /// </summary>
+        /// <returns></returns>
+        private DataTable MakeServerInformationTable()
+        {
+            DataTable table = new DataTable("ServerInformation");
+            DataColumn dc = new DataColumn() { DataType = System.Type.GetType("System.String"), ColumnName = "ServerName" };
+            table.Columns.Add(dc);
+            dc = new DataColumn() { DataType = System.Type.GetType("System.DateTime"), ColumnName = "CollectionTime" };
+            table.Columns.Add(dc);
+            dc = new DataColumn() { DataType = System.Type.GetType("System.Int32"), ColumnName = "Measurement" };
+            table.Columns.Add(dc);
+            return table;
+        }
+        #endregion
 
 
     }
